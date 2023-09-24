@@ -5,10 +5,10 @@ Fonts are separated by a & */
 
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: #396e94;
-  --secondary-color: #e7c24f;
-  --accent1-color: #a42212;
-  --accent2-color: white;
+  --primary-color: #457b9d;
+  --secondary-color: #edede9;
+  --accent1-color: #e3d5ca;
+  --accent2-color: #d5bdaf;
 
   /* change the values below to your chosen font(s) */
   --heading-font: "IM Fell French Canon";
@@ -138,12 +138,13 @@ nav a {
 
 nav a:link,
 nav a:visited {
-  color: var(--nav-link-color);
+  color: #444;
+  background-color: #e3d5ca;
 }
 
 nav a:hover {
-  color: var(--nav-hover-link-color);
-  background-color: var(--nav-hover-background-color);
+  color: #457b9d;
+  background-color: #edede9;
 }
 
 .sitemap {
