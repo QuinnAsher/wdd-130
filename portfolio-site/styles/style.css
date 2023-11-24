@@ -1,0 +1,219 @@
+:root {
+  /*Colors*/
+  --primary-color: #0d67b5;
+  --secondary-color: #3c5c72;
+  --accent1-color: #f7f3e8;
+  --accent2-color: white;
+
+  /*    fonts*/
+  --heading-font: "Noto Sans Display", serif;
+  --paragraph-font: "Open Sans", sans-serif;
+}
+
+/*Resets*/
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--paragraph-font);
+}
+
+/*Header styles*/
+.hdr {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  margin-top: 1rem;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.logo-link {
+  grid-column: 1 / 2;
+}
+
+.nav-links {
+  grid-column: 9 / 13;
+}
+
+.nav-links a:link,
+.nav-links a:visited {
+  background-color: var(--accent1-color);
+  color: var(--secondary-color);
+  padding-inline: 2rem;
+  padding-block: 0.6rem;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+  border: 3px solid var(--secondary-color);
+  margin: -3px;
+}
+
+.logo-img {
+  max-width: 4rem;
+}
+
+.nav-links {
+  display: flex;
+  /*gap: 2rem;*/
+  justify-content: space-around;
+}
+
+/*Intro section*/
+.intro-container {
+  max-width: 1200px;
+  margin-top: 2rem;
+  margin-inline: auto;
+  display: flex;
+}
+
+.main-h1 {
+  font-family: var(--heading-font);
+}
+
+.intro {
+  align-self: baseline;
+  margin-right: 10rem;
+  flex: 60%;
+}
+
+.intro p {
+  margin-top: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.resume-btn {
+  background-color: var(--accent1-color);
+  color: var(--secondary-color);
+
+  border: none;
+  padding-inline: 1.5rem;
+  padding-block: 0.7rem;
+}
+
+.resume-btn:hover {
+  border: 3px solid var(--secondary-color);
+  cursor: pointer;
+  margin: -3px;
+}
+
+.my-pass-container {
+  align-self: center;
+  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  overflow: hidden;
+  margin-right: 10rem;
+}
+
+.my-pass {
+}
+
+.hero {
+  margin-top: 4rem;
+  max-height: 25rem;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+}
+
+/*Post section*/
+.post-container {
+  margin-top: 4rem;
+  background-color: var(--accent1-color);
+  padding: 3rem 2rem 3.5rem 2rem;
+}
+
+.prt-showcase {
+  margin-bottom: 2.5rem;
+}
+
+.post-container h2,
+.post h3 {
+  font-family: var(--heading-font);
+}
+
+.post-container h2 {
+  max-width: 1200px;
+  margin-inline: auto;
+  font-size: 1rem;
+  opacity: 0.5;
+  line-height: 1.7;
+}
+
+.post-flex {
+  max-width: 1200px;
+  margin-inline: auto;
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.post {
+  background-color: var(--accent2-color);
+  flex: 1;
+  padding: 2rem;
+}
+
+.post h3 {
+  margin-bottom: 1.5rem;
+}
+
+.post pre {
+  margin-bottom: 1.5rem;
+}
+
+.post p {
+  line-height: 1.5;
+}
+
+/*Project section*/
+.project-container {
+  margin-top: 4rem;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.project-link img {
+  border-radius: 0.6rem;
+  /*overflow: hidden;*/
+}
+
+.project-link-container img {
+  transition: opacity 2s;
+}
+
+.project-link-container img:hover {
+  opacity: 0.7;
+}
+
+.project-info {
+  flex: 80%;
+}
+
+.year {
+  display: inline-block;
+  border-radius: 3rem;
+  background-color: var(--primary-color);
+  color: var(--accent1-color);
+  padding-inline: 1.5rem;
+  padding-block: 0.3rem;
+  margin-block: 1rem;
+}
+
+.lrn {
+  /*font-style: italic;*/
+  margin-left: 2rem;
+  display: inline-block;
+  opacity: 0.5;
+}
