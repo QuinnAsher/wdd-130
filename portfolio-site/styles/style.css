@@ -34,7 +34,13 @@ body {
 }
 
 .logo-link {
+  border-radius: 0.6rem;
+  overflow: hidden;
   grid-column: 1 / 2;
+}
+
+.logo-img {
+  border-radius: 0.6rem;
 }
 
 .nav-links {
@@ -43,6 +49,7 @@ body {
 
 .nav-links a:link,
 .nav-links a:visited {
+  border-radius: 0.6rem;
   background-color: var(--accent1-color);
   color: var(--secondary-color);
   padding-inline: 2rem;
@@ -91,6 +98,7 @@ body {
 }
 
 .resume-btn {
+  border-radius: 0.6rem;
   background-color: var(--accent1-color);
   color: var(--secondary-color);
 
@@ -106,10 +114,11 @@ body {
 }
 
 .my-pass-container {
+  background-color: #6f7364;
   align-self: center;
   border-radius: 50%;
-  width: 9rem;
-  height: 9rem;
+  width: 150px;
+  height: 150px;
   overflow: hidden;
   margin-right: 10rem;
 }
@@ -160,6 +169,7 @@ body {
 }
 
 .post {
+  border-radius: 0.6rem;
   background-color: var(--accent2-color);
   flex: 1;
   padding: 2rem;
@@ -184,9 +194,15 @@ body {
   margin-inline: auto;
 }
 
+.projects-details {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
 .project-link img {
   border-radius: 0.6rem;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
 .project-link-container img {
@@ -216,4 +232,8 @@ body {
   margin-left: 2rem;
   display: inline-block;
   opacity: 0.5;
+}
+
+.project-description {
+  line-height: 1.5;
 }
