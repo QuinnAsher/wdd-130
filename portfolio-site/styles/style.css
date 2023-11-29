@@ -215,6 +215,7 @@ body {
 
 .project-info {
   flex: 80%;
+  vertical-align: center;
 }
 
 .year {
@@ -224,7 +225,7 @@ body {
   color: var(--accent1-color);
   padding-inline: 1.5rem;
   padding-block: 0.3rem;
-  margin-block: 1rem;
+  margin-block: 0.2rem;
 }
 
 .lrn {
@@ -236,4 +237,25 @@ body {
 
 .project-description {
   line-height: 1.5;
+}
+
+/*Footer section*/
+footer {
+  text-align: center;
+}
+
+footer a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  margin-right: 0.3rem;
+}
+
+footer a:last-of-type {
+  text-align: center;
+  display: block;
+  margin-block: 0.5rem;
+}
+
+footer p {
+  margin-bottom: 2rem;
 }
