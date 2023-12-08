@@ -15,75 +15,97 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!--    <link rel="stylesheet" href="styles/style.css" />-->
     <script
       crossorigin="anonymous"
       src="https://kit.fontawesome.com/dad41bef55.js"
     ></script>
-    <!--    <link href="styles/style.css" rel="stylesheet" />-->
+    <link href="styles/style.css" rel="stylesheet" />
   </head>
   <body>
     <div class="page-container">
       <header class="hdr">
         <a class="logo-link" href="index.html">
-          <img alt="" class="logo-img" src="images/quinnTech-logos.jpeg" />
+          <img class="logo-img" alt="" src="images/quinnTech-logos.jpeg" />
         </a>
 
         <nav class="nav-links">
           <a href="index.html">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
         </nav>
       </header>
 
-      <main>
+      <main class="contact-container">
         <section class="main-section">
           <div class="left-side">
-            <h1>Contact Me</h1>
-            <p>
-              You’ve seen my projects and you like what I do. Great! Let’s work
-              together to create amazing websites. Just fill out the form below
+            <h1 class="contact-me">Contact Me</h1>
+            <p class="contact-p">
+              You’ve seen my projects, and you like what I do. Great! Let’s work
+              together to create amazing websites. Just fill out the form below,
               and I’ll get back to you as soon as possible.
             </p>
 
-            <a href=""
-              ><i class="fa-brands fa-facebook fa-xl"></i>Like me on facebook</a
-            >
-            <a href=""
-              ><i class="fa-brands fa-google fa-xl"></i>Send me email here</a
-            >
-            <a href=""
-              ><i class="fa-brands fa-x-twitter fa-xl"></i>Follow me on X</a
-            >
-            <a href=""
-              ><i class="fa-brands fa-linkedin fa-xl"></i>View my LinkedId
-              page</a
-            >
+            <div class="icon-container">
+              <div class="icon">
+                <a href=""
+                  ><i class="fa-brands fa-facebook fa-xl"></i>Like me on
+                  facebook</a
+                >
+              </div>
+              <div class="icon">
+                <a href=""
+                  ><i class="fa-brands fa-google fa-xl"></i>Send me email
+                  here</a
+                >
+              </div>
+              <div class="icon">
+                <a href=""
+                  ><i class="fa-brands fa-x-twitter fa-xl"></i>Follow me on X</a
+                >
+              </div>
+              <div class="icon">
+                <a href=""
+                  ><i class="fa-brands fa-linkedin fa-xl"></i>View my LinkedId
+                  page</a
+                >
+              </div>
+            </div>
           </div>
 
           <div class="contact-img-container">
-            <img alt="" src="images/contact-us.jpg" />
+            <img alt="" src="images/close-up-briefcase(1).jpg" />
           </div>
         </section>
+        <div id="feedback"></div>
 
         <section class="form-section">
-          <form action="" class="form" method="post">
-            <ul>
-              <li>
+          <form class="form" action="" method="post">
+            <ul class="input-cnt">
+              <li><h2 class="email-me">Email me</h2></li>
+              <li class="input-flex">
                 <label for="name">Your name</label>
                 <input id="name" name="user_name" type="text" />
               </li>
-              <li>
+              <li class="input-flex">
                 <label for="email">Your email</label>
                 <input id="email" name="user_email" type="email" />
               </li>
+            </ul>
+            <ul class="msg-cnt">
               <li>
-                <label for="msg">Your message</label>
+                <label for="msg">message</label>
                 <textarea
+                  class="input-flex"
                   cols="30"
                   id="msg"
                   name="user_msg"
                   rows="10"
                 ></textarea>
+              </li>
+              <li class="button">
+                <button class="btn">Send your message</button>
               </li>
             </ul>
           </form>
@@ -99,5 +121,27 @@
       <a href="site-plan.html">Site plan</a>
       <p>Copyright &copy;2023 All rights reserved</p>
     </footer>
+
+    <!--  Script section-->
+    <script>
+      // get the feedback div element, so we can do something with it.
+      const feedbackElement = document.getElementById("feedback");
+      // get the form, so we can read what was entered in it.
+      const formElement = document.forms[0];
+      // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+      formElement.addEventListener("submit", function (e) {
+        // stop the form from doing the default action.
+        e.preventDefault();
+        // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+        feedbackElement.innerHTML =
+          "Hello " +
+          formElement.user_name.value +
+          "! Thank you for your message. We will get back with you as soon as possible!";
+        // make the feedback element visible.
+        feedbackElement.style.display = "block";
+        // add a class to move everything down so our message doesn't cover it.
+        document.body.classList.toggle("moveDown");
+      });
+    </script>
   </body>
 </html>
